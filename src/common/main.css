@@ -33,7 +33,8 @@
 
   --border-radius: 0px;
   --border-thickness: 2px;
-  --border-color: var(--preferred-accent-color);
+  --border-color: var(--base03);
+  --accent-border-color: var(--preferred-accent-color);
   --transition-timing: 0.2s ease;
 }
 

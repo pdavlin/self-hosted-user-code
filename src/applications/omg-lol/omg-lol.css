@@ -4,14 +4,6 @@
   letter-spacing: -0.05ch;
   font-weight: 300;
   --label-font-weight: 500;
-
-  --selected: color-mix(in oklab, --txt-0 70%, white);
-
-  --acc-0: var(--preferred-accent-color);
-
-  --border-width: 2px;
-  --border-color: var(--base03);
-  --border-transition: 0.2s ease;
 }
 
 * {
@@ -38,7 +30,7 @@ main {
   padding-top: 0;
   margin-top: 0;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--border-color);
+  border: var(--border-thickness) solid var(--border-color);
   transition: border-color var(--transition-timing);
   position: relative;
 }
@@ -52,7 +44,7 @@ main {
 #profile-items:hover,
 #hobbies:hover,
 #keys:hover {
-  border-color: var(--preferred-accent-color);
+  border-color: var(--accent-border-color);
 }
 
 #profile-items::after,
@@ -67,7 +59,7 @@ main {
   background-color: var(--background-color);
   padding: 0 4px;
   z-index: 100;
-  transition: color var(--border-transition);
+  transition: color var(--transition-timing);
 }
 
 #profile-items:hover::after,
