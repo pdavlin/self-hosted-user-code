@@ -115,12 +115,50 @@ body a {
   font-family: "BerkeleyMono", Consolas, monospace;
 }
 
+.CustomPageContent_customPageContent__vNiml {
+  --custom-content-accent-color: var(--base0b);
+}
+
 .CustomPageContent_customPageContent__vNiml a:hover {
   color: color-mix(in oklab, var(--base0b) 70%, white);
 }
 
+.CustomPageContent_customPageContent__vNiml > h5 ~ * {
+  border-left: 2px solid var(--custom-content-accent-color);
+  border-right: 2px solid var(--custom-content-accent-color);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.CustomPageContent_customPageContent__vNiml > h5 + * {
+  border-top: 2px solid var(--custom-content-accent-color);
+  padding-top: 1rem;
+}
+
+.CustomPageContent_customPageContent__vNiml > h5 ~ *:has(+ h5),
+.CustomPageContent_customPageContent__vNiml > h5 ~ *:last-child {
+  border-bottom: 2px solid var(--custom-content-accent-color);
+}
+
+.CustomPageContent_customPageContent__vNiml > h5 {
+  background: var(--background-color);
+  border: none;
+  color: var(--custom-content-accent-color);
+  margin: 0 0 0 0.5rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  transform: translateY(1rem);
+  width: fit-content;
+}
+
 .OfflineBanner_actionLink__g64az:hover {
   color: var(--base0b);
+}
+
+.Content_bottomPageContentContainer__zagTZ {
+  padding-top: 0;
 }
 
 @media (prefers-color-scheme: dark) {
