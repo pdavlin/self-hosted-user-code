@@ -1,40 +1,29 @@
+@import url("https://pdavlin.github.io/self-hosted-user-code/common/main.css");
+
 :root {
   letter-spacing: -0.05ch;
   font-weight: 300;
   --label-font-weight: 500;
 
-  --pad: 16px;
-  --txt-pad: 10px;
+  --bg-0: var(--base00);
+  --bg-1: var(--base01);
+  --bg-2: var(--base02);
+  --bg-3: var(--base03);
 
-  --panel-roundness: 0px;
-
-  --bg-0: oklch(26.52% 0.0069 17.6);
-  --bg-1: oklch(43.93% 0.0112 17.59);
-  --bg-2: oklch(48.57% 0.01 17.5);
-  --bg-3: oklch(57.49% 0.009 17.42);
-
-  --hover: oklch(54% 0 0 / 0.1);
-  --active: oklch(54% 0 0 / 0.2);
-  --selected: var(--active);
+  --selected: color-mix(in oklab, --txt-0 70%, white);
 
   --txt-dark: var(--bg-0);
   --txt-link: var(--cyan);
-  --txt-0: oklch(94.87% 0.0083 17.3);
-  --txt-1: oklch(90.95% 0.0092 17.33);
-  --txt-2: oklch(62% 0.0058 17.31);
-  --txt-3: oklch(57.49% 0.009 17.42);
+  --txt-0: var(--base07);
+  --txt-1: var(--base06);
+  --txt-2: var(--base05);
+  --txt-3: var(--base04);
 
-  --acc-0: var(--green);
-  --acc-1: var(--purple-1);
-  --acc-2: var(--purple-2);
+  --acc-0: var(--preferred-accent-color);
 
   --border-width: 2px;
   --border-color: var(--bg-3);
-  --border-hover-color: var(--acc-0);
   --border-transition: 0.2s ease;
-
-  --purple: oklch(73% 0.12 300);
-  --green: oklch(59.5% 0.1162 195.52);
 }
 
 * {
@@ -60,9 +49,9 @@ main {
 #keys {
   padding-top: 0;
   margin-top: 0;
-  border-radius: var(--panel-roundness);
+  border-radius: var(--border-radius);
   border: var(--border-width) solid var(--border-color);
-  transition: border-color var(--border-transition);
+  transition: border-color var(--transition-timing);
   position: relative;
 }
 
@@ -75,14 +64,14 @@ main {
 #profile-items:hover,
 #hobbies:hover,
 #keys:hover {
-  border-color: var(--border-hover-color);
+  border-color: var(--preferred-accent-color);
 }
 
 #profile-items::after,
 #hobbies::after,
 #keys::after {
   display: block;
-  color: var(--txt-3);
+  color: var(--bg-3);
   font-weight: var(--label-font-weight);
   position: absolute;
   top: -10px;
@@ -96,7 +85,7 @@ main {
 #profile-items:hover::after,
 #hobbies:hover::after,
 #keys:hover::after {
-  color: var(--border-hover-color);
+  color: var(--preferred-accent-color);
 }
 
 #profile-items::after {
@@ -113,18 +102,18 @@ main {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-0: oklch(90.95% 0.0092 17.33);
-    --bg-1: oklch(62% 0.0058 17.31);
-    --bg-2: oklch(57.49% 0.009 17.42);
-    --bg-3: oklch(28% 0 0);
+    --bg-0: var(--base07);
+    --bg-1: var(--base06);
+    --bg-2: var(--base05);
+    --bg-3: var(--base04);
 
-    --txt-0: oklch(26.52% 0.0069 17.6);
-    --txt-1: oklch(43.93% 0.0112 17.59);
-    --txt-2: oklch(48.57% 0.01 17.5);
-    --txt-3: oklch(57.49% 0.009 17.42);
+    --txt-0: var(--base03);
+    --txt-1: var(--base02);
+    --txt-2: var(--base01);
+    --txt-3: var(--base00);
   }
 }
 
 .omg-verified {
-  color: var(--border-hover-color) !important;
+  color: var(--preferred-accent-color) !important;
 }

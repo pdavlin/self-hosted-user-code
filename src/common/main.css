@@ -20,14 +20,21 @@
   --base0f: hsl(330, 45%, 53%); /* #bd5187 - magenta */
 
   --preferred-accent-color: var(--base0b);
+  --preferred-accent-hover-color: color-mix(
+    in oklab,
+    var(--preferred-accent-color) 70%,
+    white
+  );
 
   --background-color: var(--base07);
   --foreground-color: var(--base00);
 
   --font-family: "Berkeley Mono";
 
+  --border-radius: 0px;
   --border-thickness: 2px;
   --border-color: var(--preferred-accent-color);
+  --transition-timing: 0.2s ease;
 }
 
 @media (prefers-color-scheme: dark) {
