@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "BerkeleyMono";
+  src: url("/public/BerkeleyMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --base00: hsl(0, 7%, 10%); /* #1b1818  - darkest   */
+  --base01: hsl(0, 6%, 15%); /* #292424 */
+  --base02: hsl(0, 5%, 33%); /* #585050 */
+  --base03: hsl(0, 4%, 38%); /* #655d5d */
+  --base04: hsl(0, 3%, 48%); /* #7e7777 */
+  --base05: hsl(0, 2%, 53%); /* #8a8585 */
+  --base06: hsl(0, 15%, 89%); /* #e7dfdf */
+  --base07: hsl(0, 25%, 94%); /* #f4ecec  - lightest */
+  --base08: hsl(0, 55%, 54%); /* #ca4949 - red       */
+  --base09: hsl(15, 50%, 47%); /* #b45a3c - orange   */
+  --base0a: hsl(30, 46%, 43%); /* #a06e3b - yellow   */
+  --base0b: hsl(180, 30%, 42%); /* #4b8b8b - green   */
+  --base0c: hsl(210, 40%, 52%); /* #5485b6 - cyan    */
+  --base0d: hsl(240, 45%, 62%); /* #7272ca - blue    */
+  --base0e: hsl(260, 45%, 58%); /* #8464c4 - violet  */
+  --base0f: hsl(330, 45%, 53%); /* #bd5187 - magenta */
+
+  --background-color: var(--base07);
+  --foreground-color: var(--base00);
+
+  --theme-color-background-main: var(--background-color);
+
+  --theme-color-action: var(--theme-color-background-main, #0780b5);
+  --theme-color-action-hover: var(--base04, #0780b5);
+  --theme-color-components-primary-button-border: var(
+    --foreground-color,
+    #0780b5
+  );
+  --theme-color-components-primary-button-text: var(--foreground-color);
+  --theme-color-background-header: var(--base00, #121613);
+  --theme-color-components-content-background: var(--background-color);
+  --theme-color-components-text-on-dark: var(--background-color);
+  --theme-color-components-text-on-light: var(--foreground-color);
+  --theme-color-components-menu-item-focus-bg: var(--base06);
+  --theme-color-components-video-background: var(--base01);
+
+  --font-owncast-display: "BerkeleyMono";
+  --font-owncast-body: "BerkeleyMono";
+
+  --chat-message-text-size: 16px !important;
+}
+
+hr {
+  border-top: 1px solid var(--base0b) !important;
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--base0b) 70%, white);
+}
+
+body a {
+  color: var(--base0b);
+}
+
+#header-logo {
+  display: none;
+}
+
+#chat-container {
+  --theme-color-components-chat-text: var(--foreground-color);
+  font-family: "BerkeleyMono", Consolas, monospace;
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+/* Ant Design Buttons */
+
+.ant-btn-primary:focus,
+.ant-btn-primary:hover {
+  background-color: var(--background-color);
+  color: var(--base0b);
+  border-color: var(--base0b);
+}
+
+/* Ant Design Tabs */
+
+.ant-tabs {
+  color: var(--foreground-color);
+}
+
+.ant-tabs-tab:hover,
+.ant-tabs-tab-btn:hover,
+.ant-tabs-tab.ant-tabs-tab-active:hover {
+  color: var(--base0b);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover {
+  color: var(--base0b);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active {
+  background-color: var(--background-color);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  background-color: var(--theme-color-background-main, #fff);
+  color: var(--foreground-color);
+}
+
+.ant-tabs-ink-bar {
+  background-color: var(--base0b);
+}
+
+/* Specific element changes (unsure if these generated class names will change) */
+
+.Header_header__h_8kj {
+  font-family: "BerkeleyMono", Consolas, monospace;
+}
+
+.CustomPageContent_customPageContent__vNiml a:hover {
+  color: color-mix(in oklab, var(--base0b) 70%, white);
+}
+
+.OfflineBanner_actionLink__g64az:hover {
+  color: var(--base0b);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--base00);
+    --foreground-color: var(--base07);
+  }
+
+  .Header_header__h_8kj h1 {
+    color: var(--foreground-color);
+  }
+
+  .Footer_footer__2_6CR {
+    color: var(--foreground-color);
+  }
+
+  .Footer_footer__2_6CR a {
+    color: var(--foreground-color);
+  }
+
+  .ChatUserBadge_badge__Nf_Gh {
+    background: none;
+  }
+
+  .OfflineBanner_actionLink__g64az {
+    color: var(--base0b);
+  }
+
+  .OfflineBanner_actionLink__g64az:hover {
+    color: color-mix(in oklab, var(--base0b) 70%, white);
+  }
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: var(--foreground-color);
+}
