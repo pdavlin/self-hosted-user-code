@@ -111,23 +111,28 @@ body a {
 
 /* Specific element changes (unsure if these generated class names will change) */
 
+/* header font */
 .Header_header__h_8kj {
   font-family: "BerkeleyMono", Consolas, monospace;
 }
 
+/* logo below video player */
 .Logo_root__BkHmT {
   background-color: var(--background-color);
   border-color: var(--base0b);
 }
 
+/* theme for markdown content */
 .CustomPageContent_customPageContent__vNiml {
   --custom-content-accent-color: var(--base0b);
 }
 
+/* visually distinct hover color for links */
 .CustomPageContent_customPageContent__vNiml a:hover {
   color: color-mix(in oklab, var(--base0b) 70%, white);
 }
 
+/* body content between headers */
 .CustomPageContent_customPageContent__vNiml > h5 ~ * {
   border-left: 2px solid var(--custom-content-accent-color);
   border-right: 2px solid var(--custom-content-accent-color);
@@ -137,16 +142,19 @@ body a {
   padding-bottom: 0.5rem;
 }
 
+/* first sibling after h5 tag */
 .CustomPageContent_customPageContent__vNiml > h5 + * {
   border-top: 2px solid var(--custom-content-accent-color);
   padding-top: 1rem;
 }
 
+/* last sibling after an h5 tag */
 .CustomPageContent_customPageContent__vNiml > h5 ~ *:has(+ h5),
 .CustomPageContent_customPageContent__vNiml > h5 ~ *:last-child {
   border-bottom: 2px solid var(--custom-content-accent-color);
 }
 
+/* header tags (move inside/on top of border and style) */
 .CustomPageContent_customPageContent__vNiml > h5 {
   background: var(--background-color);
   border: none;
@@ -158,14 +166,17 @@ body a {
   width: fit-content;
 }
 
+/* provide accent color for offline banner links so it doesn't fade into offline banner color */
 .OfflineBanner_actionLink__g64az:hover {
   color: var(--base0b);
 }
 
+/* spacing for content inside ant design tab */
 .Content_bottomPageContentContainer__zagTZ {
   padding-top: 0;
 }
 
+/* styles for follower links */
 .SingleFollower_follower__QdHxf {
   border: 2px solid var(--base05);
   border-radius: 0;
