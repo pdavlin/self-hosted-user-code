@@ -16,6 +16,13 @@
   --base0e: hsl(260, 45%, 58%); /* #8464c4 - violet  */
   --base0f: hsl(330, 45%, 53%); /* #bd5187 - magenta */
 
+  --preferred-accent-color: var(--base0b);
+
   --background-color: var(--base07);
   --foreground-color: var(--base00);
+
+  --font-family: "Berkeley Mono";
+
+  --border-thickness: 2px;
+  --border-color: var(--preferred-accent-color);
 }
