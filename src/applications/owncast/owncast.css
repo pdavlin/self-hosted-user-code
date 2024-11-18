@@ -1,33 +1,17 @@
+@import url("https://pdavlin.github.io/self-hosted-user-code/common/main.css");
+
+/* we have a local variant of BM that I prefer */
 @font-face {
-  font-family: "BerkeleyMono";
+  font-family: "BerkeleyMonoLocal";
   src: url("/public/BerkeleyMono-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 :root {
-  --base00: hsl(0, 7%, 10%); /* #1b1818  - darkest   */
-  --base01: hsl(0, 6%, 15%); /* #292424 */
-  --base02: hsl(0, 5%, 33%); /* #585050 */
-  --base03: hsl(0, 4%, 38%); /* #655d5d */
-  --base04: hsl(0, 3%, 48%); /* #7e7777 */
-  --base05: hsl(0, 2%, 53%); /* #8a8585 */
-  --base06: hsl(0, 15%, 89%); /* #e7dfdf */
-  --base07: hsl(0, 25%, 94%); /* #f4ecec  - lightest */
-  --base08: hsl(0, 55%, 54%); /* #ca4949 - red       */
-  --base09: hsl(15, 50%, 47%); /* #b45a3c - orange   */
-  --base0a: hsl(30, 46%, 43%); /* #a06e3b - yellow   */
-  --base0b: hsl(180, 30%, 42%); /* #4b8b8b - green   */
-  --base0c: hsl(210, 40%, 52%); /* #5485b6 - cyan    */
-  --base0d: hsl(240, 45%, 62%); /* #7272ca - blue    */
-  --base0e: hsl(260, 45%, 58%); /* #8464c4 - violet  */
-  --base0f: hsl(330, 45%, 53%); /* #bd5187 - magenta */
-
-  --background-color: var(--base07);
-  --foreground-color: var(--base00);
-
+  /* remapping Owncast variables to my theme */
   --theme-color-background-main: var(--background-color);
-
   --theme-color-action: var(--theme-color-background-main, #0780b5);
   --theme-color-action-hover: var(--base04, #0780b5);
   --theme-color-components-primary-button-border: var(
@@ -42,22 +26,31 @@
   --theme-color-components-menu-item-focus-bg: var(--base06);
   --theme-color-components-video-background: var(--base01);
 
-  --font-owncast-display: "BerkeleyMono";
-  --font-owncast-body: "BerkeleyMono";
+  --font-owncast-display: "BerkeleyMonoLocal";
+  --font-owncast-body: "BerkeleyMonoLocal";
 
   --chat-message-text-size: 16px !important;
 }
 
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: var(--foreground-color);
+}
+
 hr {
-  border-top: 1px solid var(--base0b) !important;
+  border-top: 1px solid var(--preferred-accent-color) !important;
 }
 
 ::selection {
-  background-color: color-mix(in oklab, var(--base0b) 70%, white);
+  background-color: var(--preferred-accent-hover-color);
 }
 
 body a {
-  color: var(--base0b);
+  color: var(--preferred-accent-color);
 }
 
 #header-logo {
@@ -66,7 +59,7 @@ body a {
 
 #chat-container {
   --theme-color-components-chat-text: var(--foreground-color);
-  font-family: "BerkeleyMono", Consolas, monospace;
+  font-family: "BerkeleyMonoLocal", Consolas, monospace;
   background: var(--background-color);
   color: var(--foreground-color);
 }
@@ -76,8 +69,8 @@ body a {
 .ant-btn-primary:focus,
 .ant-btn-primary:hover {
   background-color: var(--background-color);
-  color: var(--base0b);
-  border-color: var(--base0b);
+  color: var(--preferred-accent-color);
+  border-color: var(--preferred-accent-color);
 }
 
 /* Ant Design Tabs */
@@ -89,11 +82,11 @@ body a {
 .ant-tabs-tab:hover,
 .ant-tabs-tab-btn:hover,
 .ant-tabs-tab.ant-tabs-tab-active:hover {
-  color: var(--base0b);
+  color: var(--preferred-accent-color);
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover {
-  color: var(--base0b);
+  color: var(--preferred-accent-color);
 }
 
 .ant-tabs-tab.ant-tabs-tab-active {
@@ -106,36 +99,36 @@ body a {
 }
 
 .ant-tabs-ink-bar {
-  background-color: var(--base0b);
+  background-color: var(--preferred-accent-color);
 }
 
 /* Specific element changes (unsure if these generated class names will change) */
 
 /* header font */
 .Header_header__h_8kj {
-  font-family: "BerkeleyMono", Consolas, monospace;
+  font-family: "BerkeleyMonoLocal", Consolas, monospace;
 }
 
 /* logo below video player */
 .Logo_root__BkHmT {
   background-color: var(--background-color);
-  border-color: var(--base0b);
+  border-color: var(--preferred-accent-color);
 }
 
 /* theme for markdown content */
 .CustomPageContent_customPageContent__vNiml {
-  --custom-content-accent-color: var(--base0b);
+  --custom-content-accent-color: var(--preferred-accent-color);
 }
 
 /* visually distinct hover color for links */
 .CustomPageContent_customPageContent__vNiml a:hover {
-  color: color-mix(in oklab, var(--base0b) 70%, white);
+  color: var(--preferred-accent-hover-color);
 }
 
 /* body content between headers */
 .CustomPageContent_customPageContent__vNiml > h5 ~ * {
-  border-left: 2px solid var(--custom-content-accent-color);
-  border-right: 2px solid var(--custom-content-accent-color);
+  border-left: var(--border-thickness) solid var(--custom-content-accent-color);
+  border-right: var(--border-thickness) solid var(--custom-content-accent-color);
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0.5rem;
@@ -144,14 +137,15 @@ body a {
 
 /* first sibling after h5 tag */
 .CustomPageContent_customPageContent__vNiml > h5 + * {
-  border-top: 2px solid var(--custom-content-accent-color);
+  border-top: var(--border-thickness) solid var(--custom-content-accent-color);
   padding-top: 1rem;
 }
 
 /* last sibling after an h5 tag */
 .CustomPageContent_customPageContent__vNiml > h5 ~ *:has(+ h5),
 .CustomPageContent_customPageContent__vNiml > h5 ~ *:last-child {
-  border-bottom: 2px solid var(--custom-content-accent-color);
+  border-bottom: var(--border-thickness) solid
+    var(--custom-content-accent-color);
 }
 
 /* header tags (move inside/on top of border and style) */
@@ -168,7 +162,7 @@ body a {
 
 /* provide accent color for offline banner links so it doesn't fade into offline banner color */
 .OfflineBanner_actionLink__g64az:hover {
-  color: var(--base0b);
+  color: var(--preferred-accent-color);
 }
 
 /* spacing for content inside ant design tab */
@@ -178,21 +172,16 @@ body a {
 
 /* styles for follower links */
 .SingleFollower_follower__QdHxf {
-  border: 2px solid var(--base05);
+  border: var(--border-thickness) solid var(--base05);
   border-radius: 0;
 }
 
 .SingleFollower_follower__QdHxf:hover {
-  border-color: var(--base0b);
-  color: var(--base0b);
+  border-color: var(--preferred-accent-color);
+  color: var(--preferred-accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: var(--base00);
-    --foreground-color: var(--base07);
-  }
-
   .Header_header__h_8kj h1 {
     color: var(--foreground-color);
   }
@@ -210,19 +199,10 @@ body a {
   }
 
   .OfflineBanner_actionLink__g64az {
-    color: var(--base0b);
+    color: var(--preferred-accent-color);
   }
 
   .OfflineBanner_actionLink__g64az:hover {
-    color: color-mix(in oklab, var(--base0b) 70%, white);
+    color: var(--preferred-accent-hover-color);
   }
-}
-
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
-  color: var(--foreground-color);
 }
