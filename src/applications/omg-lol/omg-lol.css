@@ -5,29 +5,17 @@
   font-weight: 300;
   --label-font-weight: 500;
 
-  --bg-0: var(--base00);
-  --bg-1: var(--base01);
-  --bg-2: var(--base02);
-  --bg-3: var(--base03);
-
   --selected: color-mix(in oklab, --txt-0 70%, white);
-
-  --txt-dark: var(--bg-0);
-  --txt-link: var(--cyan);
-  --txt-0: var(--base07);
-  --txt-1: var(--base06);
-  --txt-2: var(--base05);
-  --txt-3: var(--base04);
 
   --acc-0: var(--preferred-accent-color);
 
   --border-width: 2px;
-  --border-color: var(--bg-3);
+  --border-color: var(--base03);
   --border-transition: 0.2s ease;
 }
 
 * {
-  color: var(--txt-0) !important;
+  color: var(--foreground-color) !important;
   text-shadow: none !important;
 }
 
@@ -71,12 +59,12 @@ main {
 #hobbies::after,
 #keys::after {
   display: block;
-  color: var(--bg-3);
+  color: var(--base03);
   font-weight: var(--label-font-weight);
   position: absolute;
   top: -10px;
   left: 8px;
-  background-color: var(--bg-0);
+  background-color: var(--background-color);
   padding: 0 4px;
   z-index: 100;
   transition: color var(--border-transition);
@@ -98,20 +86,6 @@ main {
 
 #keys::after {
   content: "keys";
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-0: var(--base07);
-    --bg-1: var(--base06);
-    --bg-2: var(--base05);
-    --bg-3: var(--base04);
-
-    --txt-0: var(--base00);
-    --txt-1: var(--base01);
-    --txt-2: var(--base02);
-    --txt-3: var(--base03);
-  }
 }
 
 .omg-verified {
