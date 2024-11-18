@@ -3,7 +3,8 @@
 /* we have a local variant of BM that I prefer */
 @font-face {
   font-family: "BerkeleyMonoLocal";
-  src: url("/public/BerkeleyMono-Regular.woff") format("woff");
+  src: url("https://stream.davlin.io/public/BerkeleyMono-Regular.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
