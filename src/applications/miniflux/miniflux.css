@@ -2,8 +2,16 @@
 
 :root {
   --alert-color: var(--base0a);
+
   --alert-error-color: var(--base08);
+  --alert-error-background-color: color-mix(in oklab, var(--base08) 30%, white);
+
   --alert-success-color: var(--base0b);
+  --alert-success-background-color: color-mix(
+    in oklab,
+    var(--base0b) 30%,
+    white
+  );
   --body-background: var(--base07);
   --body-color: var(--base00);
   --link-color: var(--base0d);
