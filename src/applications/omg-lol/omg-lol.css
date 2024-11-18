@@ -107,10 +107,10 @@ main {
     --bg-2: var(--base05);
     --bg-3: var(--base04);
 
-    --txt-0: var(--base03);
-    --txt-1: var(--base02);
-    --txt-2: var(--base01);
-    --txt-3: var(--base00);
+    --txt-0: var(--base00);
+    --txt-1: var(--base01);
+    --txt-2: var(--base02);
+    --txt-3: var(--base03);
   }
 }
 
