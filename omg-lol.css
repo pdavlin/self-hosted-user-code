@@ -1,0 +1,130 @@
+:root {
+  letter-spacing: -0.05ch;
+  font-weight: 300;
+  --label-font-weight: 500;
+
+  --pad: 16px;
+  --txt-pad: 10px;
+
+  --panel-roundness: 0px;
+
+  --bg-0: oklch(26.52% 0.0069 17.6);
+  --bg-1: oklch(43.93% 0.0112 17.59);
+  --bg-2: oklch(48.57% 0.01 17.5);
+  --bg-3: oklch(57.49% 0.009 17.42);
+
+  --hover: oklch(54% 0 0 / 0.1);
+  --active: oklch(54% 0 0 / 0.2);
+  --selected: var(--active);
+
+  --txt-dark: var(--bg-0);
+  --txt-link: var(--cyan);
+  --txt-0: oklch(94.87% 0.0083 17.3);
+  --txt-1: oklch(90.95% 0.0092 17.33);
+  --txt-2: oklch(62% 0.0058 17.31);
+  --txt-3: oklch(57.49% 0.009 17.42);
+
+  --acc-0: var(--green);
+  --acc-1: var(--purple-1);
+  --acc-2: var(--purple-2);
+
+  --border-width: 2px;
+  --border-color: var(--bg-3);
+  --border-hover-color: var(--acc-0);
+  --border-transition: 0.2s ease;
+
+  --purple: oklch(73% 0.12 300);
+  --green: oklch(59.5% 0.1162 195.52);
+}
+
+* {
+  color: var(--txt-0) !important;
+  text-shadow: none !important;
+}
+
+body {
+  background: var(--bg-0) !important;
+}
+
+main {
+  background: var(--bg-0) !important;
+}
+
+#profile-picture {
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+#profile-items,
+#hobbies,
+#keys {
+  padding-top: 0;
+  margin-top: 0;
+  border-radius: var(--panel-roundness);
+  border: var(--border-width) solid var(--border-color);
+  transition: border-color var(--border-transition);
+  position: relative;
+}
+
+#hobbies,
+#keys,
+#footer {
+  margin-top: 1.5rem;
+}
+
+#profile-items:hover,
+#hobbies:hover,
+#keys:hover {
+  border-color: var(--border-hover-color);
+}
+
+#profile-items::after,
+#hobbies::after,
+#keys::after {
+  display: block;
+  color: var(--txt-3);
+  font-weight: var(--label-font-weight);
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  background-color: var(--bg-0);
+  padding: 0 4px;
+  z-index: 100;
+  transition: color var(--border-transition);
+}
+
+#profile-items:hover::after,
+#hobbies:hover::after,
+#keys:hover::after {
+  color: var(--border-hover-color);
+}
+
+#profile-items::after {
+  content: "social media profiles";
+}
+
+#hobbies::after {
+  content: "hobbies";
+}
+
+#keys::after {
+  content: "keys";
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-0: oklch(90.95% 0.0092 17.33);
+    --bg-1: oklch(62% 0.0058 17.31);
+    --bg-2: oklch(57.49% 0.009 17.42);
+    --bg-3: oklch(28% 0 0);
+
+    --txt-0: oklch(26.52% 0.0069 17.6);
+    --txt-1: oklch(43.93% 0.0112 17.59);
+    --txt-2: oklch(48.57% 0.01 17.5);
+    --txt-3: oklch(57.49% 0.009 17.42);
+  }
+}
+
+.omg-verified {
+  color: var(--border-hover-color) !important;
+}
