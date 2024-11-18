@@ -19,20 +19,20 @@
   --base0e: hsl(260, 45%, 58%); /* #8464c4 - violet  */
   --base0f: hsl(330, 45%, 53%); /* #bd5187 - magenta */
 
+  --alert-color: var(--base0a);
+  --alert-error-color: var(--base08);
+  --alert-success-color: var(--base0b);
   --body-background: var(--base07);
   --body-color: var(--base00);
   --link-color: var(--base0d);
-  --title-color: var(--base00);
   --link-focus-color: var(--base08);
-  --hr-border-color: var(--base05);
   --link-hover-color: var(--base00);
   --link-visited-color: var(--base0e);
-  --header-list-border-color: var(--base06);
   --header-link-color: var(--base02);
-  --alert-color: var(--base0a);
-  --alert-success-color: var(--base0b);
-  --alert-error-color: var(--base08);
   --header-link-hover-color: var(--base0b);
+  --header-list-border-color: var(--base06);
+  --hr-border-color: var(--base05);
+  --title-color: var(--base00);
 
   --font-family: "Berkeley Mono";
   --entry-content-font-family: "Merriweather", Georgia, "Times New Roman", Times,
@@ -52,8 +52,8 @@ button {
   :root {
     --body-background: var(--base00);
     --body-color: var(--base07);
-    --title-color: var(--base07);
     --link-color: var(--base05);
     --link-hover-color: var(--base07);
+    --title-color: var(--base07);
   }
 }

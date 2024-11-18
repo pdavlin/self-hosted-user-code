@@ -1,14 +1,12 @@
 {
-	"name": "pd-theme",
-	"version": "1.0.0",
-	"scripts": {
-		"dev": "node scripts/dev.js",
-		"build": "node scripts/build.js"
-	},
-	"author": "refact0r",
-	"license": "MIT",
-	"devDependencies": {
-		"chokidar": "^3.6.0",
-		"dotenv": "^16.4.5"
-	}
+  "name": "self-hosted-user-code",
+  "version": "1.0.0",
+  "description": "CSS and JS used for theming local applications.",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
 }
