@@ -26,6 +26,10 @@ button {
   font-family: var(--font-family);
 }
 
+::selection {
+  background-color: var(--preferred-accent-hover-color);
+}
+
 .logo a span {
   color: var(--base0b);
 }
