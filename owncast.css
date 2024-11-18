@@ -115,6 +115,10 @@ body a {
   font-family: "BerkeleyMono", Consolas, monospace;
 }
 
+.Logo_root__BkHmT {
+  border-color: var(--base0b);
+}
+
 .CustomPageContent_customPageContent__vNiml {
   --custom-content-accent-color: var(--base0b);
 }
