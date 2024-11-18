@@ -1,3 +1,6 @@
+@import url("https://cdn.cache.lol/type/berkeley-mono/berkeley-mono.css");
+@import url("https://fonts.googleapis.com/css2?family=Maitree&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
 :root {
   --base00: hsl(0, 7%, 10%); /* #1b1818  - darkest   */
   --base01: hsl(0, 6%, 15%); /* #292424 */
