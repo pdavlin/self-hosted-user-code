@@ -116,6 +116,7 @@ body a {
 }
 
 .Logo_root__BkHmT {
+  background-color: var(--background-color);
   border-color: var(--base0b);
 }
 
@@ -163,6 +164,16 @@ body a {
 
 .Content_bottomPageContentContainer__zagTZ {
   padding-top: 0;
+}
+
+.SingleFollower_follower__QdHxf {
+  border: 2px solid var(--base05);
+  border-radius: 0;
+}
+
+.SingleFollower_follower__QdHxf:hover {
+  border-color: var(--base0b);
+  color: var(--base0b);
 }
 
 @media (prefers-color-scheme: dark) {
