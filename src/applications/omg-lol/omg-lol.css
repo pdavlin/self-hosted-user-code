@@ -32,11 +32,11 @@
 }
 
 body {
-  background: var(--bg-0) !important;
+  background: var(--background-color) !important;
 }
 
 main {
-  background: var(--bg-0) !important;
+  background: var(--background-color) !important;
 }
 
 #profile-picture {
