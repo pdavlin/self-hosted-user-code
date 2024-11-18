@@ -29,3 +29,10 @@
   --border-thickness: 2px;
   --border-color: var(--preferred-accent-color);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--base00);
+    --foreground-color: var(--base07);
+  }
+}
