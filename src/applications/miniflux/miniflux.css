@@ -1,28 +1,80 @@
-@import url("https://pdavlin.github.io/self-hosted-user-code/common/main.css");
+@import url("https://cdn.cache.lol/type/berkeley-mono/berkeley-mono.css");
+@import url("https://fonts.googleapis.com/css2?family=Maitree&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --base00: hsl(0, 7%, 10%); /* #1b1818  - darkest   */
+  --base01: hsl(0, 6%, 15%); /* #292424 */
+  --base02: hsl(0, 5%, 33%); /* #585050 */
+  --base03: hsl(0, 4%, 38%); /* #655d5d */
+  --base04: hsl(0, 3%, 48%); /* #7e7777 */
+  --base05: hsl(0, 2%, 53%); /* #8a8585 */
+  --base06: hsl(0, 15%, 89%); /* #e7dfdf */
+  --base07: hsl(0, 25%, 94%); /* #f4ecec  - lightest */
+  --base08: hsl(0, 55%, 54%); /* #ca4949 - red       */
+  --base09: hsl(15, 50%, 47%); /* #b45a3c - orange   */
+  --base0a: hsl(30, 46%, 43%); /* #a06e3b - yellow   */
+  --base0b: hsl(180, 30%, 42%); /* #4b8b8b - green   */
+  --base0c: hsl(210, 40%, 52%); /* #5485b6 - cyan    */
+  --base0d: hsl(240, 45%, 62%); /* #7272ca - blue    */
+  --base0e: hsl(260, 45%, 58%); /* #8464c4 - violet  */
+  --base0f: hsl(330, 45%, 53%); /* #bd5187 - magenta */
+
+  --preferred-accent-color: var(--base0b);
+  --preferred-accent-hover-color: color-mix(
+    in oklab,
+    var(--preferred-accent-color) 70%,
+    white
+  );
+
+  --background-color: var(--base07);
+  --foreground-color: var(--base00);
+
+  --font-family: "Berkeley Mono";
+
+  --border-radius: 0px;
+  --border-thickness: 2px;
+  --border-color: var(--base03);
+  --accent-border-color: var(--preferred-accent-color);
+  --transition-timing: 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--base00);
+    --foreground-color: var(--base07);
+  }
+}
 
 :root {
   --alert-color: var(--base0a);
 
   --alert-error-color: var(--base08);
-  --alert-error-background-color: color-mix(in oklab, var(--base08) 30%, white);
+  --alert-error-background-color: color-mix(in oklab, var(--base08) 20%, white);
 
   --alert-success-color: var(--base0b);
   --alert-success-background-color: color-mix(
     in oklab,
-    var(--base0b) 30%,
+    var(--base0b) 20%,
     white
   );
   --body-background: var(--base07);
   --body-color: var(--base00);
-  --link-color: var(--base0d);
+  --link-color: var(--base01);
   --link-focus-color: var(--base08);
-  --link-hover-color: var(--base00);
+  --link-hover-color: var(--base03);
   --link-visited-color: var(--base0e);
   --header-link-color: var(--base02);
   --header-link-hover-color: var(--base0b);
   --header-list-border-color: var(--base06);
   --hr-border-color: var(--base05);
   --title-color: var(--base00);
+
+  --current-item-border-color: var(--preferred-accent-color);
+  --feed-has-unread-background-color: color-mix(
+    in oklab,
+    var(--alert-success-color) 30%,
+    white
+  );
 
   --font-family: "Berkeley Mono";
   --entry-content-font-family: "Merriweather", Georgia, "Times New Roman", Times,
@@ -35,7 +87,7 @@ button {
 }
 
 ::selection {
-  background-color: var(--preferred-accent-hover-color);
+  background-color: var(--alert-success-background-color);
 }
 
 .logo a span {
@@ -49,5 +101,15 @@ button {
     --link-color: var(--base05);
     --link-hover-color: var(--base07);
     --title-color: var(--base07);
+    --alert-success-background-color: color-mix(
+      in oklab,
+      var(--base0b) 30%,
+      black
+    );
+    --feed-has-unread-background-color: color-mix(
+      in oklab,
+      var(--alert-success-color) 50%,
+      black
+    );
   }
 }
