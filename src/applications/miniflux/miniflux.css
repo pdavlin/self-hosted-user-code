@@ -112,4 +112,9 @@ button {
       black
     );
   }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--base0b) 20%, white);
+    color: var(--base00);
+  }
 }
