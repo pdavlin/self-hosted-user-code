@@ -179,6 +179,15 @@ body a {
 .SingleFollower_follower__QdHxf {
   border: var(--border-thickness) solid var(--base05);
   border-radius: 0;
+  div:last-child {
+    div:first-child {
+      background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
+      transform: translateY(-20px);
+      width: fit-content;
+    }
+  }
 }
 
 .SingleFollower_follower__QdHxf:hover {
@@ -186,12 +195,9 @@ body a {
   color: var(--preferred-accent-color);
   div:last-child {
     color: var(--preferred-accent-color);
+
     div:first-child {
-      background-color: var(--background-color);
-      margin: 0;
-      padding: 0;
-      transform: translateY(-20px);
-      width: fit-content;
+      color: var(--preferred-accent-color);
     }
   }
 }
