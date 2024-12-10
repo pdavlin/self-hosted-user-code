@@ -138,6 +138,7 @@ body a {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.5rem;
+  padding-left: 1.5rem;
 }
 
 /* first sibling after h5 tag */
@@ -167,7 +168,7 @@ body a {
 
 /* header tags (move inside/on top of border and style) */
 .CustomPageContent_customPageContent__vNiml > ul {
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
 /* provide accent color for offline banner links so it doesn't fade into offline banner color */
