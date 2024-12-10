@@ -25,3 +25,20 @@ for (let i = 0; i < socialLinks.length; i++) {
     imgElement.style.borderRadius = "50%";
   }
 }
+
+const getDay = () => {
+  const days = ["8", "9", "a", "b", "c", "d", "e", "f"];
+  const date = new Date().getDate() % 8;
+  return days[date];
+};
+
+const getRandomHex = () => {
+  return getDay();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.style.setProperty(
+    "--preferred-accent-color",
+    `var(--base0${getRandomHex()})`,
+  );
+});

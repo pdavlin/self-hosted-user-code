@@ -64,7 +64,7 @@
   --link-hover-color: var(--base03);
   --link-visited-color: var(--base0e);
   --header-link-color: var(--base02);
-  --header-link-hover-color: var(--base0b);
+  --header-link-hover-color: var(--preferred-accent-color);
   --header-list-border-color: var(--base06);
   --hr-border-color: var(--base05);
   --title-color: var(--base00);
@@ -87,11 +87,16 @@ button {
 }
 
 ::selection {
-  background-color: var(--alert-success-background-color);
+  background-color: color-mix(
+    in oklab,
+    var(--preferred-accent-color) 20%,
+    white
+  );
+  color: var(--base00);
 }
 
 .logo a span {
-  color: var(--base0b);
+  color: var(--preferred-accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,10 +116,5 @@ button {
       var(--alert-success-color) 50%,
       black
     );
-  }
-
-  ::selection {
-    background-color: color-mix(in oklab, var(--base0b) 20%, white);
-    color: var(--base00);
   }
 }
