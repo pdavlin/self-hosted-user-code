@@ -184,6 +184,12 @@ body a {
 .SingleFollower_follower__QdHxf:hover {
   border-color: var(--preferred-accent-color);
   color: var(--preferred-accent-color);
+  div:last-child {
+    color: var(--preferred-accent-color);
+    div:first-child {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
