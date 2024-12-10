@@ -132,8 +132,7 @@ body a {
   border-right: var(--border-thickness) solid var(--custom-content-accent-color);
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
 }
 
 /* first sibling after h5 tag */
@@ -159,6 +158,11 @@ body a {
   padding: 0 0.5rem;
   transform: translateY(1rem);
   width: fit-content;
+}
+
+/* header tags (move inside/on top of border and style) */
+.CustomPageContent_customPageContent__vNiml > ul {
+  padding-left: 2rem;
 }
 
 /* provide accent color for offline banner links so it doesn't fade into offline banner color */
