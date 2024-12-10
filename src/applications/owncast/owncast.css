@@ -80,7 +80,8 @@ body a {
   color: var(--foreground-color);
 }
 
-.ant-tabs-nav {
+.ant-tabs > .ant-tabs-nav,
+.ant-tabs > div > .ant-tabs-nav {
   display: none;
 }
 
