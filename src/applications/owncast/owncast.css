@@ -137,14 +137,13 @@ body a {
   border-right: var(--border-thickness) solid var(--custom-content-accent-color);
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0.5rem;
-  padding-left: 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 /* first sibling after h5 tag */
 .CustomPageContent_customPageContent__vNiml > h5 + * {
   border-top: var(--border-thickness) solid var(--custom-content-accent-color);
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 /* last sibling after an h5 tag */
@@ -152,6 +151,7 @@ body a {
 .CustomPageContent_customPageContent__vNiml > h5 ~ *:last-child {
   border-bottom: var(--border-thickness) solid
     var(--custom-content-accent-color);
+  padding-bottom: 1.5rem;
 }
 
 /* header tags (move inside/on top of border and style) */
