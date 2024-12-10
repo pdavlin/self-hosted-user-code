@@ -80,6 +80,10 @@ body a {
   color: var(--foreground-color);
 }
 
+.ant-tabs-nav {
+  display: none;
+}
+
 .ant-tabs-tab:hover,
 .ant-tabs-tab-btn:hover,
 .ant-tabs-tab.ant-tabs-tab-active:hover {
