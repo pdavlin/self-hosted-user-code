@@ -179,7 +179,10 @@ body a {
 .SingleFollower_follower__QdHxf {
   border: var(--border-thickness) solid var(--base05);
   border-radius: 0;
+  display: flex;
+  flex-direction: row-reverse;
   div:last-child {
+    flex: 1;
     div:first-child {
       background-color: var(--background-color);
       margin: 0;
