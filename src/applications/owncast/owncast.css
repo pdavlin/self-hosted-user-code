@@ -187,7 +187,11 @@ body a {
   div:last-child {
     color: var(--preferred-accent-color);
     div:first-child {
-      transform: translateY(-10px);
+      background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
+      transform: translateY(-20px);
+      width: fit-content;
     }
   }
 }
