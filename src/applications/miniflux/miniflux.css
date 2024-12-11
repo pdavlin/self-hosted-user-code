@@ -88,7 +88,7 @@
     white
   );
 
-  --font-family: "Berkeley Mono";
+  --font-family: "Berkeley Mono", monospace;
   --entry-content-font-family: "Merriweather", Georgia, "Times New Roman", Times,
     serif;
   --entry-content-font-weight: 400;
