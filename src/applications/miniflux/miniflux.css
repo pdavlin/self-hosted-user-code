@@ -59,6 +59,18 @@
   );
   --body-background: var(--base07);
   --body-color: var(--base00);
+  --button-primary-background: var(--preferred-accent-color);
+  --button-primary-border-color: color-mix(
+    in oklab,
+    var(--button-primary-background) 70%,
+    black
+  );
+  --button-primary-focus-background: color-mix(
+    in oklab,
+    var(--button-primary-background) 70%,
+    white
+  );
+  --button-primary-focus-border-color: var(--button-primary-border-color);
   --link-color: var(--base01);
   --link-focus-color: var(--base08);
   --link-hover-color: var(--base03);
@@ -84,6 +96,11 @@
 
 button {
   font-family: var(--font-family);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--preferred-accent-color);
 }
 
 ::selection {
