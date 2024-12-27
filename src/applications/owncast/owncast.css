@@ -132,30 +132,30 @@ body a {
 }
 
 /* body content between headers */
-.CustomPageContent_customPageContent__vNiml > h5 ~ * {
+/* .CustomPageContent_customPageContent__vNiml > h5 ~ * {
   border-left: var(--border-thickness) solid var(--custom-content-accent-color);
   border-right: var(--border-thickness) solid var(--custom-content-accent-color);
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.5rem 1.5rem;
-}
+} */
 
 /* first sibling after h5 tag */
-.CustomPageContent_customPageContent__vNiml > h5 + * {
+/* .CustomPageContent_customPageContent__vNiml > h5 + * {
   border-top: var(--border-thickness) solid var(--custom-content-accent-color);
   padding-top: 1.5rem;
-}
+} */
 
 /* last sibling after an h5 tag */
-.CustomPageContent_customPageContent__vNiml > h5 ~ *:has(+ h5),
+/* .CustomPageContent_customPageContent__vNiml > h5 ~ *:has(+ h5),
 .CustomPageContent_customPageContent__vNiml > h5 ~ *:last-child {
   border-bottom: var(--border-thickness) solid
     var(--custom-content-accent-color);
   padding-bottom: 1.5rem;
-}
+} */
 
 /* header tags (move inside/on top of border and style) */
-.CustomPageContent_customPageContent__vNiml > h5 {
+/* .CustomPageContent_customPageContent__vNiml > h5 {
   background: var(--background-color);
   border: none;
   color: var(--custom-content-accent-color);
@@ -164,12 +164,12 @@ body a {
   padding: 0 0.5rem;
   transform: translateY(1rem);
   width: fit-content;
-}
+} */
 
 /* header tags (move inside/on top of border and style) */
-.CustomPageContent_customPageContent__vNiml > ul {
+/* .CustomPageContent_customPageContent__vNiml > ul {
   padding-left: 3rem;
-}
+} */
 
 /* provide accent color for offline banner links so it doesn't fade into offline banner color */
 .OfflineBanner_actionLink__g64az:hover {
