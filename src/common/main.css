@@ -56,20 +56,3 @@
 .pd-style-content-box:hover {
   border-color: var(--accent-border-color);
 }
-
-.pd-style-content-box::after {
-  display: block;
-  color: var(--base03);
-  font-weight: var(--label-font-weight);
-  position: absolute;
-  top: -10px;
-  left: 8px;
-  background-color: var(--background-color);
-  padding: 0 4px;
-  z-index: 100;
-  transition: color var(--transition-timing);
-}
-
-.pd-style-content-box:hover::after {
-  color: var(--preferred-accent-color);
-}

@@ -36,9 +36,54 @@ const getRandomHex = () => {
   return getDay();
 };
 
+function logAllElementsUnder(containerSelector) {
+  const container = document.querySelector(containerSelector);
+
+  if (!container) {
+    console.error(`Container with selector "${containerSelector}" not found.`);
+    return;
+  }
+
+  const allElements = Array.from(container.querySelectorAll("*"));
+  console.log("All elements under", containerSelector, allElements);
+
+  // Split the elements into chunks based on h5 tags
+  const sections = [];
+  let currentSection = [];
+
+  allElements.forEach((el) => {
+    if (el.tagName === "H5") {
+      if (currentSection.length > 0) {
+        sections.push(currentSection);
+        currentSection = [];
+      }
+    }
+    currentSection.push(el);
+  });
+
+  if (currentSection.length > 0) {
+    sections.push(currentSection);
+  }
+
+  console.log("Split sections:", sections);
+
+  // Wrap each section in a new div
+  sections.forEach((section) => {
+    const wrapperDiv = document.createElement("div");
+    wrapperDiv.classList.add("pd-style-content-box");
+
+    section.forEach((el) => {
+      wrapperDiv.appendChild(el);
+    });
+
+    container.appendChild(wrapperDiv);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.style.setProperty(
     "--preferred-accent-color",
     `var(--base0${getRandomHex()})`,
   );
 });
+logAllElementsUnder('[class*="CustomPageContent"]');
