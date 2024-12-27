@@ -36,7 +36,7 @@ const getRandomHex = () => {
   return getDay();
 };
 
-function logAllElementsUnder(containerSelector) {
+function groupContentByH5(containerSelector) {
   const container = document.querySelector(containerSelector);
 
   if (!container) {
@@ -44,40 +44,33 @@ function logAllElementsUnder(containerSelector) {
     return;
   }
 
-  const allElements = Array.from(container.querySelectorAll("*"));
-  console.log("All elements under", containerSelector, allElements);
+  let currentElement = container.firstElementChild;
 
-  // Split the elements into chunks based on h5 tags
-  const sections = [];
-  let currentSection = [];
+  while (currentElement) {
+    if (currentElement.tagName === "H5") {
+      // Create a new wrapper div
+      const wrapperDiv = document.createElement("div");
+      wrapperDiv.classList.add("pd-style-content-box");
 
-  allElements.forEach((el) => {
-    if (el.tagName === "H5") {
-      if (currentSection.length > 0) {
-        sections.push(currentSection);
-        currentSection = [];
+      // Append the current H5 to the wrapper
+      container.insertBefore(wrapperDiv, currentElement);
+      wrapperDiv.appendChild(currentElement);
+
+      // Move all siblings until the next H5 into the wrapper
+      let sibling = wrapperDiv.nextElementSibling;
+      while (sibling && sibling.tagName !== "H5") {
+        const nextSibling = sibling.nextElementSibling; // Cache next sibling
+        wrapperDiv.appendChild(sibling); // Move sibling into wrapper
+        sibling = nextSibling; // Update the pointer
       }
+
+      // After processing this group, set currentElement to the next sibling
+      currentElement = wrapperDiv.nextElementSibling;
+    } else {
+      // Move to the next element if it's not an H5
+      currentElement = currentElement.nextElementSibling;
     }
-    currentSection.push(el);
-  });
-
-  if (currentSection.length > 0) {
-    sections.push(currentSection);
   }
-
-  console.log("Split sections:", sections);
-
-  // Wrap each section in a new div
-  sections.forEach((section) => {
-    const wrapperDiv = document.createElement("div");
-    wrapperDiv.classList.add("pd-style-content-box");
-
-    section.forEach((el) => {
-      wrapperDiv.appendChild(el);
-    });
-
-    container.appendChild(wrapperDiv);
-  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -86,4 +79,4 @@ document.addEventListener("DOMContentLoaded", () => {
     `var(--base0${getRandomHex()})`,
   );
 });
-logAllElementsUnder('[class*="CustomPageContent"]');
+groupContentByH5('[class*="CustomPageContent"]');

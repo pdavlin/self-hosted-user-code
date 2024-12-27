@@ -181,6 +181,17 @@ body a {
   grid-column: 1 / -1;
 }
 
+@media (max-width: 768px) {
+  .CustomPageContent_customPageContent__vNiml {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  /* Remove the span since it's not needed in single column */
+  .CustomPageContent_customPageContent__vNiml > *:last-child:nth-child(odd) {
+    grid-column: auto; /* Reset the column span */
+  }
+}
+
 /* provide accent color for offline banner links so it doesn't fade into offline banner color */
 .OfflineBanner_actionLink__g64az:hover {
   color: var(--preferred-accent-color);
