@@ -178,11 +178,17 @@ input:focus-visible {
     0 0 0 6px var(--body-color);
 }
 
-/* In-article links underline in the accent color, as on davlin.io */
+/* In-article links match body text color, distinguished by the accent
+   underline (davlin.io). Stock --link-color is a muted grey that reads
+   dimmer than body text; inherit keeps links at full reading contrast. */
 .entry-content a {
+  color: inherit;
   text-decoration-line: underline;
   text-decoration-color: var(--preferred-accent-color);
   text-underline-offset: 2px;
+}
+.entry-content a:hover {
+  color: var(--preferred-accent-color);
 }
 
 /* List titles are headings, not body links — underline only on hover so the
