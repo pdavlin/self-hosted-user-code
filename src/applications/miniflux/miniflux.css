@@ -173,9 +173,16 @@ input:focus-visible,
     0 0 0 6px var(--body-color);
 }
 
-/* Links underline in the accent color, as on davlin.io */
-.entry-content a,
-.item-title a {
+/* In-article links underline in the accent color, as on davlin.io */
+.entry-content a {
+  text-decoration-line: underline;
+  text-decoration-color: var(--preferred-accent-color);
+  text-underline-offset: 2px;
+}
+
+/* List titles are headings, not body links — underline only on hover so the
+   rule doesn't run under the favicon and trailing space in the title link. */
+.item-title a:hover {
   text-decoration-line: underline;
   text-decoration-color: var(--preferred-accent-color);
   text-underline-offset: 2px;
