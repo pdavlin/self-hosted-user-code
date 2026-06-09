@@ -112,6 +112,10 @@
   --header-link-focus-color: var(--preferred-accent-color);
   --item-status-read-title-focus-color: var(--preferred-accent-color);
 
+  /* Selected list row: thin accent border, no stock dark-mode blue glow */
+  --current-item-border-width: 2px;
+  --current-item-box-shadow: none;
+
   /* Unread counter badge in the accent (stock #666 grey) */
   --counter-color: var(--preferred-accent-color);
 
@@ -161,11 +165,12 @@ input[type="radio"] {
   color: var(--preferred-accent-color);
 }
 
-/* davlin.io signature tri-ring focus outline */
+/* davlin.io signature tri-ring focus outline — for small controls only.
+   List rows use Miniflux's native single accent border (--current-item-*);
+   a tri-ring on a full-width row reads as a loud double-framed box. */
 a:focus-visible,
 button:focus-visible,
-input:focus-visible,
-.item.current-item {
+input:focus-visible {
   outline: none;
   box-shadow:
     0 0 0 2px var(--preferred-accent-color),
